@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--MainVC-->
@@ -47,6 +48,7 @@
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgE-CG-XQb">
                                                     <rect key="frame" x="26" y="211" width="36" height="30"/>
+                                                    <color key="tintColor" red="1" green="0.76364920250000001" blue="0.001635324071" alpha="1" colorSpace="calibratedRGB"/>
                                                     <state key="normal" title="More"/>
                                                 </button>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n3p-X0-dl6">
@@ -69,6 +71,7 @@
                                             <outlet property="movieDesc" destination="UD3-EX-WGe" id="aZ7-O8-YWH"/>
                                             <outlet property="movieImage" destination="8Qw-cf-2bm" id="TTR-l3-xtv"/>
                                             <outlet property="movieTitle" destination="9dc-xF-gQQ" id="G4s-cN-60e"/>
+                                            <segue destination="zsP-cG-sX9" kind="show" id="yuO-il-M4V"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -108,6 +111,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1187" y="355"/>
+        </scene>
+        <!--DetailVC-->
+        <scene sceneID="Iil-ry-cxN">
+            <objects>
+                <viewController id="zsP-cG-sX9" customClass="DetailVC" customModule="Favorite_Movies" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="s6M-Nr-voU"/>
+                        <viewControllerLayoutGuide type="bottom" id="RoL-KS-Nlb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OwT-O6-RL9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0A-lS-Zrc">
+                                <rect key="frame" x="20" y="423" width="560" height="157"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="157" id="l2z-l4-Tue"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detailImage" translatesAutoresizingMaskIntoConstraints="NO" id="f4A-3H-20y">
+                                <rect key="frame" x="0.0" y="64" width="600" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="dWM-eM-MZo"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ft-uF-wfP">
+                                <rect key="frame" x="20" y="389" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="DpB-r6-SVw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="i0A-lS-Zrc" firstAttribute="leading" secondItem="OwT-O6-RL9" secondAttribute="leading" constant="20" id="12h-MS-8kd"/>
+                            <constraint firstAttribute="trailing" secondItem="i0A-lS-Zrc" secondAttribute="trailing" constant="20" id="2lp-zF-JYU"/>
+                            <constraint firstItem="f4A-3H-20y" firstAttribute="top" secondItem="s6M-Nr-voU" secondAttribute="bottom" id="Hr4-BB-Q4x"/>
+                            <constraint firstAttribute="trailing" secondItem="9Ft-uF-wfP" secondAttribute="trailing" constant="20" id="UV8-li-z2F"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="f4A-3H-20y" secondAttribute="trailing" constant="-20" id="V4J-Bp-w31"/>
+                            <constraint firstItem="9Ft-uF-wfP" firstAttribute="leading" secondItem="OwT-O6-RL9" secondAttribute="leading" constant="20" id="hk3-2F-3Wy"/>
+                            <constraint firstItem="i0A-lS-Zrc" firstAttribute="top" secondItem="9Ft-uF-wfP" secondAttribute="bottom" constant="13" id="iKo-iJ-Ws3"/>
+                            <constraint firstItem="9Ft-uF-wfP" firstAttribute="top" secondItem="f4A-3H-20y" secondAttribute="bottom" constant="25" id="mzn-Cm-pAi"/>
+                            <constraint firstItem="f4A-3H-20y" firstAttribute="leading" secondItem="OwT-O6-RL9" secondAttribute="leadingMargin" constant="-20" id="sZT-jl-zvj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="movieDesc" destination="i0A-lS-Zrc" id="xfI-fs-7vL"/>
+                        <outlet property="movieImage" destination="f4A-3H-20y" id="V89-zC-Tjh"/>
+                        <outlet property="movieTitle" destination="9Ft-uF-wfP" id="tRu-QP-ucS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u9g-hl-RVT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1187" y="1066"/>
         </scene>
         <!--Add MovieVC-->
         <scene sceneID="JkV-ZR-d7Z">
@@ -226,4 +289,5 @@
         <image name="btnAdd" width="39" height="39"/>
         <image name="detailImage" width="414" height="312"/>
     </resources>
+    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

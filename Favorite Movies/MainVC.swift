@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -21,8 +22,15 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         tableView.delegate = self
         
         navItem.titleView = UIImageView(image: UIImage(named: "FAVCINE"))
-        
+        navigationController?.navigationBar.translucent = true
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        fetchData()
+        tableView.reloadData()
+    }
+    
+//    MARK: - Table
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -43,9 +51,21 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         } else {
             return UITableViewCell()
         }
-        
     }
 
+    func fetchData() {
+        let app = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context = app.managedObjectContext
+        let fetchRequest = NSFetchRequest(entityName: "Movie")
+        
+        do {
+            let result = try context.executeFetchRequest(fetchRequest)
+            movies = result as! [Movie]
+        } catch {
+            print("unable to fetch")
+        }
+    }
+    
 
 
 }

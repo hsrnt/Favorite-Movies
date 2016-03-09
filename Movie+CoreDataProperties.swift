@@ -17,5 +17,7 @@ extension Movie {
     @NSManaged var title: String?
     @NSManaged var image: NSData?
     @NSManaged var desc: String?
+    @NSManaged var imdb: String?
+
 
 }

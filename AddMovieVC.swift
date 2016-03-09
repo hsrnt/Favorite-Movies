@@ -27,6 +27,10 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         
         movieImg.layer.cornerRadius = 20
         movieImg.clipsToBounds = true
+        
+//        self.navigationController?.navigationItem.backBarButtonItem?.tintColor = UIColor.whiteColor()
+        self.navigationController?.navigationBar.barStyle = .Black
+//        self.navigationController?.navigationBar.barTintColor = UIColor.orangeColor()
     }
     
     @IBAction func addImage(sender: UIButton) {
@@ -44,6 +48,7 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     
 
     @IBAction func addMovie(sender: UIButton) {
+//        save to coreData:
         if titleField.text != "" && descField.text != "" && imdbField.text != "" {
             let app = UIApplication.sharedApplication().delegate as! AppDelegate
             let context = app.managedObjectContext
@@ -52,9 +57,24 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
             
             movie.title = titleField.text
             movie.desc = descField.text
-//            movie.
+            movie.imdb = imdbField.text
+            movie.setMovieImage(movieImg.image!)
+            
+            context.insertObject(movie)
+            
+            do {
+                try context.save()
+            } catch {
+                print("unable to save")
+            }
+            
+            self.navigationController?.popViewControllerAnimated(true)
         }
     }
 
-
 }
+
+
+
+
+

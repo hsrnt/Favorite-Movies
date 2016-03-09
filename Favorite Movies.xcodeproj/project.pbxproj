@@ -17,6 +17,7 @@
 		33C062291C90380400100649 /* Movie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C062271C90380400100649 /* Movie+CoreDataProperties.swift */; };
 		33C0622A1C90380400100649 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C062281C90380400100649 /* Movie.swift */; };
 		33C0622C1C903E6500100649 /* AddMovieVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0622B1C903E6500100649 /* AddMovieVC.swift */; };
+		33C062321C90B56600100649 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C062311C90B56600100649 /* DetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		33C062271C90380400100649 /* Movie+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		33C062281C90380400100649 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		33C0622B1C903E6500100649 /* AddMovieVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMovieVC.swift; sourceTree = "<group>"; };
+		33C062311C90B56600100649 /* DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			children = (
 				33C0620F1C90245400100649 /* MainVC.swift */,
 				33C0622B1C903E6500100649 /* AddMovieVC.swift */,
+				33C062311C90B56600100649 /* DetailVC.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				33C0622A1C90380400100649 /* Movie.swift in Sources */,
 				33C0622C1C903E6500100649 /* AddMovieVC.swift in Sources */,
 				33C062101C90245400100649 /* MainVC.swift in Sources */,
+				33C062321C90B56600100649 /* DetailVC.swift in Sources */,
 				33C062261C9034EA00100649 /* MovieCell.swift in Sources */,
 				33C0620E1C90245400100649 /* AppDelegate.swift in Sources */,
 			);
@@ -331,6 +335,7 @@
 				33C062211C90245400100649 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
