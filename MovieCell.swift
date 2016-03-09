@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WebKit
 
 class MovieCell: UITableViewCell {
     
@@ -15,7 +16,9 @@ class MovieCell: UITableViewCell {
     @IBOutlet weak var movieDesc: UILabel!
     @IBOutlet weak var btnMore: UIButton!
     
-
+    var webView: WKWebView!
+    var urlToLoad: String!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         movieImage.clipsToBounds = true
@@ -31,6 +34,22 @@ class MovieCell: UITableViewCell {
         movieImage.image = movie.getImage()
         movieTitle.text = movie.title
         movieDesc.text = movie.desc
+        urlToLoad = movie.imdb
+    }
+    
+//    MARK: - load website
+    
+    func loadRequest(url: String) {
+        let urlRequest = NSURLRequest(URL: NSURL(string: url)!)
+        webView.loadRequest(urlRequest)
+    }
+    
+    @IBAction func goToURL(sender: UIButton) {
+        loadRequest(urlToLoad)
     }
     
 }
+
+
+
+

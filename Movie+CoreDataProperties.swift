@@ -18,6 +18,8 @@ extension Movie {
     @NSManaged var image: NSData?
     @NSManaged var desc: String?
     @NSManaged var imdb: String?
+    @NSManaged var plotSummary: String?
+
 
 
 }

@@ -15,6 +15,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var navItem: UINavigationItem!
     
     var movies = [Movie]()
+    var currentCell: Int!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,10 +44,8 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         if let cell = tableView.dequeueReusableCellWithIdentifier("MovieCell") as? MovieCell {
-//            cell.movieTitle.text = "titllle"
-//            cell.movieDesc.text = "gooog"
-//            cell.movieImage.image = UIImage(named: "detailImage")
-            cell.configureCell(movies[indexPath.row])
+            currentCell = indexPath.row
+            cell.configureCell(movies[currentCell])
             return cell
         } else {
             return UITableViewCell()
@@ -63,6 +62,18 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             movies = result as! [Movie]
         } catch {
             print("unable to fetch")
+        }
+    }
+    
+//    MARK: - segue
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "detailVCSegue" {
+            if let destinationVC = segue.destinationViewController as? DetailVC {
+                destinationVC.ttl = movies[currentCell].title
+                destinationVC.desc = movies[currentCell].desc
+                destinationVC.plot = movies[currentCell].plotSummary
+                destinationVC.img = movies[currentCell].getImage()
+            }
         }
     }
     

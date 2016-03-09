@@ -14,6 +14,7 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var descField: UITextField!
     @IBOutlet weak var imdbField: UITextField!
+    @IBOutlet weak var plotSummaryField: UITextField!
     @IBOutlet weak var movieImg: UIImageView!
     @IBOutlet weak var addImageBtn: UIButton!
     
@@ -28,23 +29,18 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         movieImg.layer.cornerRadius = 20
         movieImg.clipsToBounds = true
         
-//        self.navigationController?.navigationItem.backBarButtonItem?.tintColor = UIColor.whiteColor()
         self.navigationController?.navigationBar.barStyle = .Black
-//        self.navigationController?.navigationBar.barTintColor = UIColor.orangeColor()
     }
     
     @IBAction func addImage(sender: UIButton) {
         presentViewController(imagePicker, animated: true, completion: nil)
-        
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
         dismissViewControllerAnimated(true, completion: nil)
         movieImg.image = image
         addImageBtn.titleLabel?.text = ""
-        
     }
-    
     
 
     @IBAction func addMovie(sender: UIButton) {
@@ -58,6 +54,7 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
             movie.title = titleField.text
             movie.desc = descField.text
             movie.imdb = imdbField.text
+            movie.plotSummary = plotSummaryField.text
             movie.setMovieImage(movieImg.image!)
             
             context.insertObject(movie)
