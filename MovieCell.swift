@@ -18,7 +18,7 @@ class MovieCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        movieImage.clipsToBounds = true
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -27,4 +27,10 @@ class MovieCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    func configureCell(movie: Movie) {
+        movieImage.image = movie.getImage()
+        movieTitle.text = movie.title
+        movieDesc.text = movie.desc
+    }
+    
 }

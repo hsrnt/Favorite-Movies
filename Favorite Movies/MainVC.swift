@@ -10,9 +10,10 @@ import UIKit
 
 class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var navItem: UINavigationItem!
+    
+    var movies = [Movie]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,6 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         navItem.titleView = UIImageView(image: UIImage(named: "FAVCINE"))
         
-        
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -29,11 +29,21 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return movies.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        
+        if let cell = tableView.dequeueReusableCellWithIdentifier("MovieCell") as? MovieCell {
+//            cell.movieTitle.text = "titllle"
+//            cell.movieDesc.text = "gooog"
+//            cell.movieImage.image = UIImage(named: "detailImage")
+            cell.configureCell(movies[indexPath.row])
+            return cell
+        } else {
+            return UITableViewCell()
+        }
+        
     }
 
 
