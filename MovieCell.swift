@@ -16,8 +16,7 @@ class MovieCell: UITableViewCell {
     @IBOutlet weak var movieDesc: UILabel!
     @IBOutlet weak var btnMore: UIButton!
     
-    var webView: WKWebView!
-    var urlToLoad: String!
+//    var urlToLoad: String!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,28 +25,16 @@ class MovieCell: UITableViewCell {
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
     func configureCell(movie: Movie) {
         movieImage.image = movie.getImage()
         movieTitle.text = movie.title
-        movieDesc.text = movie.desc
-        urlToLoad = movie.imdb
+        movieDesc.text = "\"\(movie.desc!)\""
+//        urlToLoad = movie.imdb
     }
     
-//    MARK: - load website
-    
-    func loadRequest(url: String) {
-        let urlRequest = NSURLRequest(URL: NSURL(string: url)!)
-        webView.loadRequest(urlRequest)
-    }
-    
-    @IBAction func goToURL(sender: UIButton) {
-        loadRequest(urlToLoad)
-    }
-    
+
 }
 
 

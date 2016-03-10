@@ -52,6 +52,12 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         }
     }
 
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        currentCell = indexPath.row
+        performSegueWithIdentifier("detailVCSegue", sender: indexPath)
+    }
+    
+    
     func fetchData() {
         let app = UIApplication.sharedApplication().delegate as! AppDelegate
         let context = app.managedObjectContext
@@ -67,6 +73,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
 //    MARK: - segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
         if segue.identifier == "detailVCSegue" {
             if let destinationVC = segue.destinationViewController as? DetailVC {
                 destinationVC.ttl = movies[currentCell].title
@@ -74,9 +81,18 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 destinationVC.plot = movies[currentCell].plotSummary
                 destinationVC.img = movies[currentCell].getImage()
             }
+        } else if segue.identifier == "toWebVC" {
+            if let destinationVC = segue.destinationViewController as? WebVC {
+                destinationVC.urlToLoad = movies[currentCell].imdb
+            }
         }
     }
     
+    @IBAction func openWebsite(sender: UIButton) {
+        let cellIndexpath = tableView.indexPathForCell(sender.superview?.superview as! UITableViewCell)
+        currentCell = cellIndexpath?.row
+        performSegueWithIdentifier("toWebVC", sender: self)
+    }
 
 
 }

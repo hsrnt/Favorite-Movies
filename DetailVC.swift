@@ -24,9 +24,10 @@ class DetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        movieImage.clipsToBounds = true
         movieImage.image = img
         movieTitle.text = ttl
-        movieDesc.text = desc
+        movieDesc.text = "\"\(desc!)\""
         moviePlot.text = plot
     }
 

@@ -19,6 +19,7 @@
 		33C0622C1C903E6500100649 /* AddMovieVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0622B1C903E6500100649 /* AddMovieVC.swift */; };
 		33C062321C90B56600100649 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C062311C90B56600100649 /* DetailVC.swift */; };
 		33C062351C90BEED00100649 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C062341C90BEED00100649 /* DataService.swift */; };
+		33C062371C90F2B100100649 /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C062361C90F2B100100649 /* WebVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		33C0622B1C903E6500100649 /* AddMovieVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMovieVC.swift; sourceTree = "<group>"; };
 		33C062311C90B56600100649 /* DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		33C062341C90BEED00100649 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		33C062361C90F2B100100649 /* WebVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				33C0620F1C90245400100649 /* MainVC.swift */,
 				33C0622B1C903E6500100649 /* AddMovieVC.swift */,
 				33C062311C90B56600100649 /* DetailVC.swift */,
+				33C062361C90F2B100100649 /* WebVC.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				33C0622C1C903E6500100649 /* AddMovieVC.swift in Sources */,
 				33C062101C90245400100649 /* MainVC.swift in Sources */,
 				33C062321C90B56600100649 /* DetailVC.swift in Sources */,
+				33C062371C90F2B100100649 /* WebVC.swift in Sources */,
 				33C062261C9034EA00100649 /* MovieCell.swift in Sources */,
 				33C0620E1C90245400100649 /* AppDelegate.swift in Sources */,
 			);
