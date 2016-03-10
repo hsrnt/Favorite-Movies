@@ -29,6 +29,8 @@ class DetailVC: UIViewController {
         movieTitle.text = ttl
         movieDesc.text = "\"\(desc!)\""
         moviePlot.text = plot
+        
+        navigationItem.titleView = UIImageView(image: UIImage(named: "FAVCINE"))
     }
 
     

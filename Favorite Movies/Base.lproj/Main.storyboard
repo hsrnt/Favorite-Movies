@@ -33,7 +33,7 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n3p-X0-dl6">
                                                     <rect key="frame" x="0.0" y="0.0" width="520" height="26"/>
-                                                    <color key="backgroundColor" red="0.16656562972409247" green="0.12986779930940193" blue="0.16730769230769227" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="0.24116940049999999" green="0.16365083089999999" blue="0.052531871180000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="26" id="rm4-Oh-ArD"/>
                                                     </constraints>
@@ -50,16 +50,16 @@
                                                         <constraint firstAttribute="height" constant="21" id="4Gp-Bm-McB"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UD3-EX-WGe">
-                                                    <rect key="frame" x="21" y="184.5" width="468" height="53.5"/>
+                                                    <rect key="frame" x="21" y="184" width="468" height="53.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="53.5" id="Wa4-pI-5Pj"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgE-CG-XQb">
@@ -74,6 +74,13 @@
                                                         <action selector="openWebsite:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c7t-Vj-gL7"/>
                                                     </connections>
                                                 </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btnNext" translatesAutoresizingMaskIntoConstraints="NO" id="WXG-5A-0cN">
+                                                    <rect key="frame" x="470" y="250" width="42" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32" id="OmH-on-96k"/>
+                                                        <constraint firstAttribute="width" constant="42" id="wZv-mf-yJw"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="pgE-CG-XQb" firstAttribute="leading" secondItem="5zd-mw-ZtF" secondAttribute="leadingMargin" constant="18" id="0Up-pv-jF0"/>
@@ -83,6 +90,7 @@
                                                 <constraint firstItem="8Qw-cf-2bm" firstAttribute="top" secondItem="n3p-X0-dl6" secondAttribute="bottom" id="Jh9-Hi-EqP"/>
                                                 <constraint firstItem="8Qw-cf-2bm" firstAttribute="leading" secondItem="5zd-mw-ZtF" secondAttribute="leading" id="Lbj-LI-uYu"/>
                                                 <constraint firstItem="9dc-xF-gQQ" firstAttribute="leading" secondItem="5zd-mw-ZtF" secondAttribute="leading" constant="21" id="S1u-WQ-CKi"/>
+                                                <constraint firstAttribute="trailing" secondItem="WXG-5A-0cN" secondAttribute="trailing" constant="8" id="YV4-Vz-dvm"/>
                                                 <constraint firstAttribute="trailing" secondItem="UD3-EX-WGe" secondAttribute="trailing" constant="31" id="aN3-vV-R1c"/>
                                                 <constraint firstItem="pgE-CG-XQb" firstAttribute="top" secondItem="9dc-xF-gQQ" secondAttribute="bottom" constant="61" id="cNZ-7f-l2f"/>
                                                 <constraint firstAttribute="trailing" secondItem="9dc-xF-gQQ" secondAttribute="trailing" constant="31" id="ePV-1p-v0Q"/>
@@ -90,6 +98,7 @@
                                                 <constraint firstItem="n3p-X0-dl6" firstAttribute="leading" secondItem="5zd-mw-ZtF" secondAttribute="leading" id="stI-im-gIp"/>
                                                 <constraint firstAttribute="bottom" secondItem="n3p-X0-dl6" secondAttribute="bottom" constant="269" id="vt5-Xe-EIM"/>
                                                 <constraint firstItem="UD3-EX-WGe" firstAttribute="top" secondItem="9dc-xF-gQQ" secondAttribute="bottom" constant="8.5" id="zH6-GS-lMa"/>
+                                                <constraint firstAttribute="bottom" secondItem="WXG-5A-0cN" secondAttribute="bottom" constant="13" id="ziC-73-9F5"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -102,13 +111,21 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your movie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xk0-rI-tqK">
+                                <rect key="frame" x="195" y="282.5" width="211.5" height="35"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" red="1" green="0.69585488039999999" blue="0.093316639019999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.1803921568627451" green="0.13725490196078433" blue="0.17647058823529413" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.24116940045248869" green="0.16365083087012841" blue="0.052531871175864123" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Yts-qw-nFg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-64" id="3cR-uf-9f8"/>
+                            <constraint firstItem="Xk0-rI-tqK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Pae-vF-aWo"/>
                             <constraint firstAttribute="trailing" secondItem="Yts-qw-nFg" secondAttribute="trailing" constant="40" id="TbA-CT-5sh"/>
                             <constraint firstItem="Yts-qw-nFg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="Z3P-t0-4LC"/>
                             <constraint firstItem="Yts-qw-nFg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e0F-cj-zGI"/>
+                            <constraint firstItem="Xk0-rI-tqK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u2E-bL-muM"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Yts-qw-nFg" secondAttribute="bottom" id="u3S-YP-why"/>
                         </constraints>
                         <variation key="default">
@@ -130,6 +147,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="instructionLabel" destination="Xk0-rI-tqK" id="aRQ-KU-VmH"/>
                         <outlet property="navItem" destination="ce1-Jj-FD7" id="AiC-9b-Ntl"/>
                         <outlet property="tableView" destination="Yts-qw-nFg" id="Ia0-Od-fSY"/>
                         <segue destination="zsP-cG-sX9" kind="show" identifier="detailVCSegue" id="cdQ-iV-mYW"/>
@@ -159,7 +177,7 @@
                                     <constraint firstAttribute="height" constant="39" id="l2z-l4-Tue"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-ThinItalic" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -198,7 +216,7 @@
                                     <constraint firstAttribute="height" constant="21" id="DpB-r6-SVw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -220,7 +238,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="110" id="wSl-Vx-pze"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -267,7 +285,6 @@
                             <mask key="constraints">
                                 <exclude reference="EGA-E7-sT7"/>
                                 <exclude reference="qtV-aV-MCm"/>
-                                <exclude reference="zY3-b5-8yo"/>
                                 <exclude reference="V6N-Lg-eTu"/>
                                 <exclude reference="kXe-nA-V7y"/>
                                 <exclude reference="y5D-J3-jiX"/>
@@ -277,6 +294,7 @@
                                 <exclude reference="F5o-Is-l9K"/>
                                 <exclude reference="Kqp-ft-dLg"/>
                                 <exclude reference="wcu-Bs-gVd"/>
+                                <exclude reference="zY3-b5-8yo"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=regular">
@@ -286,7 +304,6 @@
                                 <exclude reference="V4J-Bp-w31"/>
                                 <include reference="qtV-aV-MCm"/>
                                 <exclude reference="sZT-jl-zvj"/>
-                                <include reference="zY3-b5-8yo"/>
                                 <exclude reference="UV8-li-z2F"/>
                                 <include reference="V6N-Lg-eTu"/>
                                 <exclude reference="hk3-2F-3Wy"/>
@@ -305,6 +322,7 @@
                                 <exclude reference="f8c-c8-6Hn"/>
                                 <exclude reference="n1y-Xj-gqg"/>
                                 <include reference="wcu-Bs-gVd"/>
+                                <include reference="zY3-b5-8yo"/>
                             </mask>
                         </variation>
                     </view>
@@ -512,6 +530,7 @@
     </scenes>
     <resources>
         <image name="btnAdd" width="39" height="39"/>
+        <image name="btnNext" width="39" height="39"/>
         <image name="detailImage" width="414" height="312"/>
     </resources>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>

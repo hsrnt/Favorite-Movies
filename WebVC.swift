@@ -35,6 +35,7 @@ class WebVC: UIViewController {
         
         progressBar.progress = 0
         webView.addObserver(self, forKeyPath: "estimatedProgress", options: .New, context: nil) //note: must be "estimatedProgress"
+        navigationItem.titleView = UIImageView(image: UIImage(named: "FAVCINE"))
     }
 
     override func viewDidAppear(animated: Bool) {

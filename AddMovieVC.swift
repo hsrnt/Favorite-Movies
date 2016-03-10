@@ -30,6 +30,8 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         movieImg.clipsToBounds = true
         
         self.navigationController?.navigationBar.barStyle = .Black
+        navigationItem.titleView = UIImageView(image: UIImage(named: "FAVCINE"))
+
     }
     
     override func viewDidLayoutSubviews() {
@@ -51,7 +53,7 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
 
     @IBAction func addMovie(sender: UIButton) {
 //        save to coreData:
-        if titleField.text != "" && descField.text != "" && imdbField.text != "" {
+        if titleField.text != "" && descField.text != "" && imdbField.text != ""  && movieImg.image != nil {
             let app = UIApplication.sharedApplication().delegate as! AppDelegate
             let context = app.managedObjectContext
             let entity = NSEntityDescription.entityForName("Movie", inManagedObjectContext: context)

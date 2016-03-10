@@ -13,6 +13,8 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var navItem: UINavigationItem!
+    @IBOutlet weak var instructionLabel: UILabel!
+    
     
     var movies = [Movie]()
     var currentCell: Int!
@@ -28,6 +30,10 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     override func viewDidAppear(animated: Bool) {
         fetchData()
+        if movies.count > 0 {
+            instructionLabel.hidden = true
+        }
+        
         tableView.reloadData()
     }
     
