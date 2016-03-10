@@ -32,6 +32,12 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         self.navigationController?.navigationBar.barStyle = .Black
     }
     
+    override func viewDidLayoutSubviews() {
+        if movieImg.image != nil {
+            addImageBtn.titleLabel?.text = ""
+        }
+    }
+    
     @IBAction func addImage(sender: UIButton) {
         presentViewController(imagePicker, animated: true, completion: nil)
     }

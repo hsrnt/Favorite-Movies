@@ -60,8 +60,11 @@ class WebVC: UIViewController {
     //    MARK: - load website
     
     func loadRequest(url: String) {
-        let urlRequest = NSURLRequest(URL: NSURL(string: url)!)
-        webView.loadRequest(urlRequest)
+        if let url = NSURL(string: url) {
+            let urlRequest = NSURLRequest(URL: url)
+            webView.loadRequest(urlRequest)
+        }
+
     }
 
 }
