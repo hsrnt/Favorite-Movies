@@ -18,7 +18,6 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     @IBOutlet weak var movieImg: UIImageView!
     @IBOutlet weak var addImageBtn: UIButton!
     
-    
     var imagePicker: UIImagePickerController!
     
     override func viewDidLoad() {
@@ -31,7 +30,6 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         
         self.navigationController?.navigationBar.barStyle = .Black
         navigationItem.titleView = UIImageView(image: UIImage(named: "FAVCINE"))
-
     }
     
     override func viewDidLayoutSubviews() {

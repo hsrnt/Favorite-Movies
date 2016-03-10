@@ -33,16 +33,4 @@ class DetailVC: UIViewController {
         navigationItem.titleView = UIImageView(image: UIImage(named: "FAVCINE"))
     }
 
-    
-
-//    func fetchData() {
-//        let app = UIApplication.sharedApplication().delegate as! AppDelegate
-//        let context = app.managedObjectContext
-//        let fetchRequest = NSFetchRequest(entityName: "Movie")
-//        
-//        do {
-//
-//        }
-//    }
-
 }
