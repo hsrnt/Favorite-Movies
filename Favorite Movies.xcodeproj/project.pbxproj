@@ -18,7 +18,6 @@
 		33C0622A1C90380400100649 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C062281C90380400100649 /* Movie.swift */; };
 		33C0622C1C903E6500100649 /* AddMovieVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0622B1C903E6500100649 /* AddMovieVC.swift */; };
 		33C062321C90B56600100649 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C062311C90B56600100649 /* DetailVC.swift */; };
-		33C062351C90BEED00100649 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C062341C90BEED00100649 /* DataService.swift */; };
 		33C062371C90F2B100100649 /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C062361C90F2B100100649 /* WebVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +35,6 @@
 		33C062281C90380400100649 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		33C0622B1C903E6500100649 /* AddMovieVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMovieVC.swift; sourceTree = "<group>"; };
 		33C062311C90B56600100649 /* DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
-		33C062341C90BEED00100649 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		33C062361C90F2B100100649 /* WebVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,7 +52,6 @@
 		33C062011C90245400100649 = {
 			isa = PBXGroup;
 			children = (
-				33C062331C90BED300100649 /* services */,
 				33C062241C9034C100100649 /* model */,
 				33C062231C9034B800100649 /* controller */,
 				33C062221C9034AF00100649 /* view */,
@@ -110,14 +107,6 @@
 				33C062281C90380400100649 /* Movie.swift */,
 			);
 			name = model;
-			sourceTree = "<group>";
-		};
-		33C062331C90BED300100649 /* services */ = {
-			isa = PBXGroup;
-			children = (
-				33C062341C90BEED00100649 /* DataService.swift */,
-			);
-			name = services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,7 +181,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33C062351C90BEED00100649 /* DataService.swift in Sources */,
 				33C062161C90245400100649 /* Favorite_Movies.xcdatamodeld in Sources */,
 				33C062291C90380400100649 /* Movie+CoreDataProperties.swift in Sources */,
 				33C0622A1C90380400100649 /* Movie.swift in Sources */,

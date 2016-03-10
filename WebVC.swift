@@ -65,7 +65,6 @@ class WebVC: UIViewController {
             let urlRequest = NSURLRequest(URL: url)
             webView.loadRequest(urlRequest)
         }
-
     }
 
 }

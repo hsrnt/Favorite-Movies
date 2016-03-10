@@ -15,7 +15,6 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var navItem: UINavigationItem!
     @IBOutlet weak var instructionLabel: UILabel!
     
-    
     var movies = [Movie]()
     var currentCell: Int!
 
