@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var descField: UITextField!
@@ -30,6 +30,12 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         
         self.navigationController?.navigationBar.barStyle = .Black
         navigationItem.titleView = UIImageView(image: UIImage(named: "FAVCINE"))
+        
+//        delegates for hiding keyboard
+        titleField.delegate = self
+        descField.delegate = self
+        imdbField.delegate = self
+        plotSummaryField.delegate = self
     }
     
     override func viewDidLayoutSubviews() {
@@ -73,6 +79,15 @@ class AddMovieVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
             
             self.navigationController?.popViewControllerAnimated(true)
         }
+    }
+    
+//    MARK: - keyboard
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        return true
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
     }
 
 }
